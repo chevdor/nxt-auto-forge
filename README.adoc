@@ -9,3 +9,22 @@ image::https://badge.waffle.io/chevdor/nxt-auto-forge.svg?label=done&title=done[
 == What is nxt-auto-forge?
 
 This command line utility written in NodeJS checks whether your Nxt node is forging or not and if not, if will start forging and notify you. 
+
+== Install
+You can install this package using npm:
+
+	npm install -g nxt-auto-forge
+
+== Getting started
+
+The best to get started is to copy the sample config file:
+
+	cp config-sample.js config.js
+
+Then edit at least the target section of the config.js file.
+
+== Run
+Execute the following command:
+
+	nxt-auto-forge
+
