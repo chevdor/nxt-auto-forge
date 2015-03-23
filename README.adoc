@@ -1,0 +1,11 @@
+= nxt-auto.forge
+Chevdor
+v0.1.0
+
+image::https://badge.waffle.io/chevdor/nxt-auto-forge.svg?label=ready&title=ready[link="http://waffle.io/chevdor/nxt-auto-forge"] 
+image::https://badge.waffle.io/chevdor/nxt-auto-forge.svg?label=inprogress&title=inprogress[link="http://waffle.io/chevdor/nxt-auto-forge"] 
+image::https://badge.waffle.io/chevdor/nxt-auto-forge.svg?label=done&title=done[link="http://waffle.io/chevdor/nxt-auto-forge"]
+
+== What is nxt-auto-forge?
+
+This command line utility written in NodeJS checks whether your Nxt node is forging or not and if not, if will start forging and notify you. 
