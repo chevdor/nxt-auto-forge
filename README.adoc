@@ -1,4 +1,4 @@
-= nxt-auto.forge
+= nxt-auto-forge
 Chevdor
 v0.1.0
 
