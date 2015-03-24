@@ -45,7 +45,8 @@ function webhook() {
 }
 
 API.getAccount({
-    account: t.account
+    account: t.account,
+    adminPassword: t.adminPassword
 }).then(function(dat) {
         var forged = dat.forgedBalanceNQT / 1e8;
 
@@ -62,7 +63,8 @@ API.getAccount({
             console.log();
         }
         API.getForging({
-            account: t.account
+            account: t.account,
+            adminPassword: t.adminPassword
         }).then(function(data) {
             var forging = data.generators.length > 0;
             var msg;
@@ -73,7 +75,8 @@ API.getAccount({
             if (!forging) {
                 API.startForging({
                     account: t.account,
-                    secretPhrase: t.secretPhrase
+                    secretPhrase: t.secretPhrase,
+                    adminPassword: t.adminPassword
                 }).then(function() {
                     msg = date.toISOString() +
                         ' - HEY! - Good I was there.' +

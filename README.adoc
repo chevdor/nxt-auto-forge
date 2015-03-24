@@ -22,6 +22,9 @@ You can install this package using npm:
 	npm install -g nxt-auto-forge
 
 See details here: https://www.npmjs.com/package/nxt-auto-forge
+On a Rpi, you may need to symlink node:
+
+	sudo ln -s /opt/node/bin/node /usr/local/bin/node
 
 == Getting started
 

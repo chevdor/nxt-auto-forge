@@ -11,7 +11,8 @@ module.exports = {
     target: {
         url: 'http://localhost:7876',
         account: 'NXT-...',
-        secretPhrase: 'secret'
+        secretPhrase: 'secret',
+        adminPassword: 'topsecret'
     },
     log:{
     	enabled: false,
