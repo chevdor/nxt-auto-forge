@@ -25,11 +25,11 @@ See details here: https://www.npmjs.com/package/nxt-auto-forge
 
 == Getting started
 
-The best to get started is to copy the sample config file:
+The best to get started is to copy the sample config file. First go to the install folder. It should be still displayed on screen if you just installed. It will be something like +/opt/node/lib/node_modules/nxt-auto-forge+
 
 	cp config-sample.js config.js
 
-Then edit at least the target section of the config.js file.
+Then use your favorite text editor to edit at least the target section of the config.js file.
 
 == Run
 Execute the following command:
