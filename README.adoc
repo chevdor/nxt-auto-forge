@@ -35,6 +35,7 @@ The best to get started is to copy the sample config file. First go to the insta
 Then use your favorite text editor to edit at least the target section of the config.js file.
 
 == Run
+=== Manually
 Execute the following command:
 
 	nxt-auto-forge
@@ -44,6 +45,16 @@ Check the available flags using:
 	nxt-auto-forge.js --help
 
 Use the -s flags for some stats about your address.
+
+=== Using crontab
+Obviously, you don´t want to be seating around. You can run nxt-auto-forge on schedule using crontab:
+	crontab -e
+
+Then add the following line:
+
+	*/5 * * * * /opt/node/bin/nxt-auto-forge	
+
+This example will run nxt-auto-forge every 5 minutes 24/7, 7 days a week to ensure you keep forging.
 
 == Support
 
