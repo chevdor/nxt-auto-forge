@@ -1,21 +1,37 @@
 {
-  "name": "nxt-auto-forge",
-  "version": "0.1.0",
-  "description": "Node script that checks if you are currently forging on the Nxt network. If not, then it will start forging for you.",
-  "main": "nxt-auto-forge.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [
-    "Nxt",
-    "forge",
-    "Crypto",
-    "NXTCoin"
-  ],
-  "author": "chevdor",
-  "license": "GPL",
-  "dependencies": {
-    "nxt-api": "^1.2.8-1",
-    "stdio": "^0.2.7"
-  }
+    "name": "nxt-auto-forge",
+    "version": "0.1.0",
+    "description": "Node script that checks if you are currently forging on the Nxt network. If not, then it will start forging for you.",
+    "main": "nxt-auto-forge.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [
+        "Nxt",
+        "forge",
+        "Crypto",
+        "NXTCoin"
+    ],
+    "author": {
+        "name": "chevdor",
+        "email": "chevdor@gmail.com"
+    },
+    "license": "GPL",
+    "dependencies": {
+        "nxt-api": "^1.2.8-1",
+        "stdio": "^0.2.7"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/chevdor/nxt-auto-forge.git"
+    },
+    "bugs": {
+        "url": "https://github.com/chevdor/nxt-auto-forge/issues"
+    },
+    "devDependencies": {
+        "jshint": "^2.6.3"
+    },
+    "scripts": {
+        "lint": "jshint nxt-auto-forge.js"
+    }
 }

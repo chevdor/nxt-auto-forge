@@ -1,0 +1,19 @@
+{
+    "browserify": true,
+    "bitwise": true,
+    "camelcase": true,
+    "eqeqeq": true,
+    "freeze": true,
+    "funcscope": false,
+    "maxcomplexity": 3, 
+    "maxdepth": 3,
+    "maxerr": 50,
+    "maxlen": 80,
+    "maxparams": 3,
+    "nonew": true,
+    "unused": true,
+    "undef": true,
+    "predef": [
+        "console"
+    ]
+}

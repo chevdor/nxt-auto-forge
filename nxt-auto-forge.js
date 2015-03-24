@@ -23,9 +23,12 @@ var options = {
 };
 
 function appendLog(msg, file) {
-    fs.appendFile('nxt-auto-forge.log', msg + '\n', encoding = 'utf8', function(err) {
-        if (err) throw err;
-    });
+    fs.appendFile(file, msg + '\n', {
+            encoding: 'utf8'
+        },
+        function(err) {
+            if (err) throw err;
+        });
 }
 
 function webhook() {
@@ -48,10 +51,14 @@ API.getAccount({
 
         if (ops.status) {
             //console.log(dat);
-            console.log('Account:            ' + dat.accountRS + ' / ' + dat.account);
-            console.log('Effective balance:  ' + dat.effectiveBalanceNXT + ' NXT');
-            console.log('Forged balance:     ' + forged + ' NXT');
-            console.log('Lessors:            ' + JSON.stringify(dat.lessorsRS));
+            console.log('Account:            ' +
+                dat.accountRS + ' / ' + dat.account);
+            console.log('Effective balance:  ' +
+                dat.effectiveBalanceNXT + ' NXT');
+            console.log('Forged balance:     ' +
+                forged + ' NXT');
+            console.log('Lessors:            ' +
+                JSON.stringify(dat.lessorsRS));
             console.log();
         }
         API.getForging({
@@ -67,8 +74,11 @@ API.getAccount({
                 API.startForging({
                     account: t.account,
                     secretPhrase: t.secretPhrase
-                }).then(function(fdata) {
-                    msg = date.toISOString() + ' - HEY! - Good I was there. You are forging again! You forged ' + forged + ' NXT so far.';
+                }).then(function() {
+                    msg = date.toISOString() +
+                        ' - HEY! - Good I was there.' +
+                        ' You are forging again! You forged ' +
+                        forged + ' NXT so far.';
 
                     console.log(msg);
 
@@ -81,7 +91,11 @@ API.getAccount({
                     }
                 });
             } else {
-                msg = date.toISOString() + ' - GOOD - You are already forging. Keep it up! You forged ' + forged + ' NXT so far.';
+                msg = date.toISOString() +
+                    ' - GOOD - You are already forging. ' +
+                    'Keep it up! You forged ' +
+                    forged + ' NXT so far.';
+
                 console.log(msg);
 
                 if (config.log.enabled) {
@@ -91,5 +105,5 @@ API.getAccount({
         });
     },
     function(e) {
-        console.log(rs + ' unknown.');
+        console.log(e);
     });
