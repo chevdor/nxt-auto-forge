@@ -1,6 +1,6 @@
 {
     "name": "nxt-auto-forge",
-    "version": "0.1.2",
+    "version": "0.1.3",
     "description": "Node script that checks if you are currently forging on the Nxt network. If not, then it will start forging for you.",
     "main": "./bin/nxt-auto-forge",
     "bin": {
