@@ -2,6 +2,8 @@
 Chevdor
 v0.1.0
 
+image:https://travis-ci.org/chevdor/nxt-auto-forge.svg["Build Status", link="https://travis-ci.org/chevdor/nxt-auto-forge"]
+
 image::https://badge.waffle.io/chevdor/nxt-auto-forge.svg?label=ready&title=ready[link="http://waffle.io/chevdor/nxt-auto-forge"] 
 image::https://badge.waffle.io/chevdor/nxt-auto-forge.svg?label=inprogress&title=inprogress[link="http://waffle.io/chevdor/nxt-auto-forge"] 
 image::https://badge.waffle.io/chevdor/nxt-auto-forge.svg?label=done&title=done[link="http://waffle.io/chevdor/nxt-auto-forge"]
