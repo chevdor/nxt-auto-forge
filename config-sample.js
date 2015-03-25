@@ -18,10 +18,22 @@ module.exports = {
     	enabled: false,
     	file: 'nxt-auto-forge.log'
     },
-    webhook:{
-    	enabled: false,
-    	url: '192.168.0.1',
-    	port: 80,
-    	path: '/your_hook'
-    }
+    webhookForgingStarted: {
+        enabled: true,
+        url: '192.168.0.1',
+        port: 80,
+        path: '/endpoint'
+    },
+    webhookForgedBlock: {
+        enabled: true,
+        url: '192.168.0.1',
+        port: 80,
+        path: '/endpoint'
+    },
+    webhookForgedLessorsWarning: {
+        enabled: true,
+        url: '192.168.0.1',
+        port: 80,
+        path: '/endpoint'
+    },
 };
