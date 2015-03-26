@@ -52,6 +52,7 @@ Use the -s flags for some stats about your address.
 
 === Using crontab
 Obviously, you don´t want to be seating around. You can run nxt-auto-forge on schedule using crontab:
+	
 	crontab -e
 
 Then add the following line:
