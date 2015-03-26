@@ -1,15 +1,12 @@
 #!/usr/local/bin/node
 
 var NXT       = require('nxt-api');
-var config    = require('./config.js');
-var t         = config.target;
-var API       = new NXT.API(t.url);
 var stdio     = require('stdio');
 var date      = new Date();
 var fs        = require('fs');
 var http      = require('http');
 var pjson     = require("./package.json");
-var stateFile = './state.json';
+var stateFile = process.env.HOME + '/state.json';
 
 var ops = stdio.getopt({
     'status': {
@@ -22,8 +19,18 @@ var ops = stdio.getopt({
     }
 });
 
+if (ops.version) {
+    console.log(pjson.name + ' version ' + pjson.version);
+    process.exit(0);
+}
+
+var config    = require('./config.js');
+var t         = config.target;
+var API       = new NXT.API(t.url);
+
 var prevState;
 try {
+    //console.log('state file: ' + stateFile);
     prevState = require(stateFile);
     //console.log(prevState);
 } catch (e) {
@@ -179,10 +186,6 @@ Array.prototype.remove = function(elem) { // jshint ignore:line
     }
 };
 
-if (ops.version) {
-    console.log(pjson.name + ' version ' + pjson.version);
-    process.exit(0);
-}
 
 API.getAccount({
     account: t.account,

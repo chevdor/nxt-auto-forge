@@ -1,6 +1,6 @@
 = nxt-auto-forge
 Chevdor
-v0.1.5
+v0.1.6
 
 image:https://travis-ci.org/chevdor/nxt-auto-forge.svg["Build Status", link="https://travis-ci.org/chevdor/nxt-auto-forge"]
 
