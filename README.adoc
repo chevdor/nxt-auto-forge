@@ -52,7 +52,7 @@ Obviously, you don´t want to be seating around. You can run nxt-auto-forge on s
 
 Then add the following line:
 
-	*/5 * * * * /opt/node/bin/nxt-auto-forge	
+	*/15 * * * * /usr/local/bin/nxt-auto-forge	
 
 This example will run nxt-auto-forge every 5 minutes 24/7, 7 days a week to ensure you keep forging.
 
