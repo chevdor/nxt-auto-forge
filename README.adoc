@@ -58,7 +58,7 @@ Then add the following line:
 
 	*/15 * * * * /usr/local/bin/nxt-auto-forge	
 
-This example will run nxt-auto-forge every 5 minutes 24/7, 7 days a week to ensure you keep forging.
+This example will run nxt-auto-forge every 15 minutes 24/7, 7 days a week to ensure you keep forging.
 
 == Support
 
