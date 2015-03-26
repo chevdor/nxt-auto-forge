@@ -8,6 +8,8 @@ var http      = require('http');
 var pjson     = require("./package.json");
 var stateFile = process.env.HOME + '/state.json';
 
+require('./lib/array.js');
+
 var ops = stdio.getopt({
     'status': {
         key: 's',
@@ -24,9 +26,9 @@ if (ops.version) {
     process.exit(0);
 }
 
-var config    = require('./config.js');
-var t         = config.target;
-var API       = new NXT.API(t.url);
+var config = require('./config.js');
+var t = config.target;
+var API = new NXT.API(t.url);
 
 var prevState;
 try {
@@ -35,9 +37,10 @@ try {
     //console.log(prevState);
 } catch (e) {
     prevState = null;
-    console.log(date.toISOString() + 
+    console.log(date.toISOString() +
         ' - State could not be loaded. Initialized.');
 }
+
 
 function appendLog(msg, file) {
     fs.appendFile(file, msg + '\n', {
@@ -82,7 +85,7 @@ function startForging(dat) {
         adminPassword: t.adminPassword
     }).then(function() {
         var msg = date.toISOString() +
-            ' - HEY! - Good I was there. ' + 
+            ' - HEY! - Good I was there. ' +
             dat.accountRS + ' is forging again!';
 
         console.log(msg);
@@ -134,58 +137,6 @@ function checkState(curr, prev) { // jshint ignore:line
         }
     }
 }
-
-Array.prototype.equals = function(array) { // jshint ignore:line
-    // if the other array is a falsy value, return
-    if (!array)
-        return false;
-
-    // compare lengths - can save a lot of time 
-    if (this.length !== array.length)
-        return false;
-
-    for (var i = 0, l = this.length; i < l; i++) {
-        // Check if we have nested arrays
-        if (this[i] instanceof Array && array[i] instanceof Array) {
-            // recurse into the nested arrays
-            if (!this[i].equals(array[i]))
-                return false;
-        } else if (this[i] !== array[i]) {
-            // Warning - two different object instances 
-            // will never be equal: {x:20} != {x:20}
-            return false;
-        }
-    }
-    return true;
-};
-
-Array.prototype.contains = function(obj) { // jshint ignore:line
-    var i = this.length;
-    while (i--) {
-        if (this[i] === obj) {
-            return true;
-        }
-    }
-    return false;
-};
-
-Array.prototype.same = function(obj) { // jshint ignore:line
-    var i = this.length;
-    while (i--) {
-        if (obj.contains(this[i])) {
-            // todo
-        }
-    }
-    return false;
-};
-
-Array.prototype.remove = function(elem) { // jshint ignore:line
-    var index = this.indexOf(elem);
-    if (index > -1) {
-        this.splice(index, 1);
-    }
-};
-
 
 API.getAccount({
     account: t.account,

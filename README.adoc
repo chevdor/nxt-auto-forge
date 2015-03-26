@@ -1,6 +1,6 @@
 = nxt-auto-forge
 Chevdor
-v0.1.6
+v1.0.0
 
 image:https://travis-ci.org/chevdor/nxt-auto-forge.svg["Build Status", link="https://travis-ci.org/chevdor/nxt-auto-forge"]
 
@@ -36,6 +36,10 @@ Then use your favorite text editor to edit at least the target section of the co
 
 == Run
 === Manually
+First check what version you have:
+
+	nxt-auto-forge -v
+
 Execute the following command:
 
 	nxt-auto-forge
